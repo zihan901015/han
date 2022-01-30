@@ -1,0 +1,132 @@
+<head>
+    <title>
+        
+    </title>
+    <link rel="stylesheet" type="text/css" href="assignment1.css">
+    <style>
+        .bg1{
+    background-color: red;
+    width: 100%;
+    height: 500px;
+    color: black;
+}
+.bg2{
+    background-color: black;
+    margin-left: 5%;
+    padding-top: 20px;
+    width: 90%;
+    height: 100%;
+}
+.bgMid1{
+    background-color: white;
+    padding-left: 5%;
+    width: 95%;
+    height: 90%;
+}
+.bgMid2{
+    background-color: lightgray;
+    width: 85%;
+    height: 300px;
+}
+table,th,td{
+    border-collapse: collapse;
+    padding: 2px;
+    border: solid 2px gray;
+    height: 100px;
+}
+th{
+    background-color: gray;
+    width: 100px;
+}
+input{
+    
+    width: 30%;
+}
+form,label{
+    border-collapse: collapse;
+    padding: 2px;
+    border: solid 2px gray;
+    width: 500px;
+}
+
+    </style>
+    <!--script type="text/javascript" src="assignment1.js" ></script-->
+    <script>
+        function addLine(){
+            var tableIF=document.getElementById("mytable");
+            var tr=document.createElement("tr");
+            var td1=document.createElement("td");
+            td1.innerHTML="hhhh";
+            var td2=document.createElement("td");
+            td2.innerHTML="hhhh";
+            tr.appendChild(td1);
+            var td3=document.createElement("td");
+            var input1=document.createElement("input");
+            
+            td3.appendChild(input1);
+
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tableIF.appendChild(tr);
+        }
+        var show=()=>{
+            alert("done!");
+            var w=document.getElementById("W1");
+            var tw=w.value;
+            var p=document.getElementById("P1");
+            p.innerText="tw";
+            
+    
+        }
+    </script>
+</head>
+
+<body>
+    <div class="bg1">
+        <div class="bg2">
+            <div class="bgMid1">
+                <h1>Grade Calculator</h1>
+                <div class="bgMid2">
+                    <p style="color: red;">Activities</p>
+                    <table id="mytable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Short Name</th>
+                            <th>Weight</th>
+                            <th>Grade</th>
+                            <th>Percent</th>
+                        </tr>
+                        <tr>
+                            <td>Activity 1</td>
+                            <td>A1</td>
+                            <td>
+                                <input id="W1"></input>
+                            </td>
+                            <td><input id="G11"></input>/<input id="G12"></input></td>
+                            <td id="P1"></td>
+                        </tr>
+                        
+                    </table>
+                    
+                    <div >
+                        <div><span>Name</span></div>
+                        <div><span>Short Name</span></div>
+                        <span>Weight</span>
+                        <br>
+                        <span>Name</span>
+                        <span><input></input></span>
+                        <span><input></input></span>
+                    </div>
+                    <button onclick="addLine()">ADD ACTIVITY</button>
+                    <p>Result</p>
+                    <div style="float: right;">
+                        <button onclick="show()">WEIGHTED</button>
+                        <button>MEAN</button>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</body>
